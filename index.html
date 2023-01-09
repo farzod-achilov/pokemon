@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="img text-center">
+      <img
+        class="m-5"
+        src="./img/pokemon-logo.png"
+        width="400px"
+        alt="pokemon_logo"
+      />
+    </div>
+    <form class="container  d-flex gap-2 flex-wrap text-center" data-form>
+      <select aria-label=".form-select-sm example" data-alpha class="el-input form-select form-select-sm m-0 d-flex">
+        <option data-option>Filter</option>
+        <option>A-Z</option>
+        <option>Z-A</option>
+        <option>Weight up</option>
+        <option>Weight down</option>
+        <option>Height up</option>
+        <option>Height down</option>
+      </select>
+      <select data-select aria-label=".form-select-sm example" class="el-input form-select form-select-sm m-0">
+        <option>Type</option>
+        <option>Grass</option>
+        <option>Normal</option>
+        <option>Fire</option>
+        <option>Water</option>
+        <option>Bug</option>
+        <option>Ground</option>
+        <option>Poison</option>
+      </select>
+      <label for="img"></label>
+      <input
+        class="el-input"
+        id="img"
+        data-img
+        type="text"
+        placeholder="Img url"
+      />
+      <label for="name"></label>
+      <input
+        class="el-input"
+        id="name"
+        data-name
+        type="text"
+        placeholder="Name"
+      />
+      <label for="type"></label>
+      <input
+        class="el-input"
+        id="type"
+        data-type
+        type="text"
+        placeholder="Type"
+      />
+      <label for="weight"></label>
+      <input
+        class="el-input"
+        id="weight"
+        data-weight
+        type="text"
+        placeholder="Weight"
+      />
+      <label for="height"></label>
+      <input
+        class="el-input"
+        id="height"
+        data-height
+        type="text"
+        placeholder="Height"
+      />
+      <button class="el-btn bg-danger">Add</button>
+      <label for="search"></label>
+      <input
+        class="el-input"
+        id="search"
+        data-search
+        type="search"
+        placeholder="Search"
+      />
+      <label for="type-search"></label>
+      <input
+        class="el-input"
+        id="type-search"
+        data-type-search
+        type="type-search"
+        placeholder="Type search"
+      />
+      <button
+        data-modal-open="#test-modal"
+        type="button"
+        class="btn btn-dark btn-light el-btn"
+      >
+        Modal
+      </button>
+    </form>
+
+    <div data-div-wrap class="wrap container d-flex"></div>
+
+    <template data-template-card>
+      <div class="card">
+        <div class="card-img-top d-flex justify-content-center">
+          <img style="object-fit: scale-down;" width="157px" height="157px" />
+        </div>
+        <div class="card-body">
+          <div class="d-flex justify-content-sm-between align-items-center">
+            <h5 class="card__title" data-card-title></h5>
+            <img src="./img/favorite_FILL0_wght400_GRAD0_opsz48.svg" width="25" height="25" alt="heart">
+          </div>
+          <p  class="card__type" data-card-type></p>
+          <h6 class="card__size">
+            <span class="span" data-card-weight></span>
+            <span data-card-height></span>
+          </h6>
+          <button data-card-add class="btn btn-success w-100 mt-4">Add</button>
+        </div>
+      </div>
+    </template>
+
+    <div class="my-modal" id="test-modal" data-modal>
+      <div class="my-modal__content" data-model-content>
+        <button class="btn btn-close" data-modal-close></button>
+        <div data-favourites-list></div>
+      </div>
+    </div>
+
+    <script src="./js/pokemon.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
